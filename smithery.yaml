@@ -1,0 +1,34 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['dist/index.js'], env: { WECHAT_APP_ID: config.wechatAppId, WECHAT_APP_SECRET: config.wechatAppSecret, WECHAT_ENV_ID: config.wechatEnvId, ...(config.logLevel ? { LOG_LEVEL: config.logLevel } : {}) } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - wechatAppId
+      - wechatAppSecret
+      - wechatEnvId
+    properties:
+      wechatAppId:
+        type: string
+        description: 微信小程序 AppID
+      wechatAppSecret:
+        type: string
+        description: 微信小程序 AppSecret
+      wechatEnvId:
+        type: string
+        description: 微信云环境 ID
+      logLevel:
+        type: string
+        default: info
+        description: 日志级别 (可选，如 debug、info)
+  exampleConfig:
+    wechatAppId: wx1234567890abcdef
+    wechatAppSecret: abcdef1234567890abcdef1234567890
+    wechatEnvId: your-cloud-env
+    logLevel: debug
