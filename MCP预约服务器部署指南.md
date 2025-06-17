@@ -39,9 +39,9 @@ cp .env.example .env
 
 **`.env` 文件配置示例：**
 ```env
-WECHAT_APP_ID=wxf76ea9bf5982dd05
-WECHAT_APP_SECRET=4af9e95c1d4394f0b48d33b9e90d22a8
-WECHAT_ENV_ID=cloud1-3ggfodggf223466a
+WECHAT_APP_ID=
+WECHAT_APP_SECRET=
+WECHAT_ENV_ID=
 ```
 
 ### 3. 构建和启动
@@ -398,9 +398,9 @@ form_fields: [
       "command": "node",
       "args": ["C:\\Projects\\restweapp\\mcp-reservation-server\\dist\\index.js"],
       "env": {
-        "WECHAT_APP_ID": "wxf76ea9bf5982dd05",
-        "WECHAT_APP_SECRET": "4af9e95c1d4394f0b48d33b9e90d22a8",
-        "WECHAT_ENV_ID": "cloud1-3ggfodggf223466a"
+        "WECHAT_APP_ID": "",
+        "WECHAT_APP_SECRET": "",
+        "WECHAT_ENV_ID": "cloud1-"
       }
     }
   }
