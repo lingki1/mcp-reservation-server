@@ -1,4 +1,5 @@
 # 预约系统 MCP 服务器
+[![smithery badge](https://smithery.ai/badge/@lingki1/mcp-reservation-server)](https://smithery.ai/server/@lingki1/mcp-reservation-server)
 
 这是一个基于 Model Context Protocol (MCP) 的微信云开发预约系统API服务器，允许AI模型安全地访问和管理预约数据。
 
@@ -29,7 +30,9 @@
 
 ## 安装和配置
 
-### 1. 安装依赖
+### 安装方式
+
+#### 1. 安装依赖
 
 ```bash
 cd mcp-reservation-server
@@ -52,13 +55,13 @@ WECHAT_APP_SECRET=你的微信小程序Secret
 WECHAT_ENV_ID=你的微信云环境ID
 ```
 
-### 3. 构建项目
+#### 3. 构建项目
 
 ```bash
 npm run build
 ```
 
-### 4. 启动服务器
+#### 4. 启动服务器
 
 ```bash
 npm start
@@ -70,9 +73,9 @@ npm start
 npm run dev
 ```
 
-## 在AI客户端中使用
+### 在AI客户端中使用
 
-### 配置MCP客户端
+#### 配置MCP客户端
 
 在你的AI客户端配置文件中添加这个MCP服务器：
 
@@ -92,7 +95,7 @@ npm run dev
 }
 ```
 
-### Claude Desktop 配置示例
+#### Claude Desktop 配置示例
 
 ```json
 {
